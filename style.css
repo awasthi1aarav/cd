@@ -1,0 +1,108 @@
+body {
+    /* Soft, romantic gradient background */
+    background: linear-gradient(135deg, #ffebee 0%, #fce4ec 100%);
+    color: #4c4c4c;
+    font-family: 'Playfair Display', serif; /* Elegant font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.countdown-container {
+    text-align: center;
+    padding: 50px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white box */
+    box-shadow: 0 15px 30px rgba(233, 30, 99, 0.2); /* Soft, pink shadow */
+}
+
+#message-area {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    color: #e91e63; /* Deep Romantic Pink */
+    font-style: italic;
+    font-weight: 400;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.unit span:first-child {
+    font-size: 4.5em;
+    font-weight: 700;
+    /* Gold/Rose color for the numbers */
+    color: #c08497;
+    margin-bottom: 5px;
+    padding: 15px 10px;
+    background: #f8f1f5;
+    border-radius: 10px;
+    min-width: 90px;
+    border: 3px solid #ffc1e3; /* Light pink border */
+}
+
+.unit span:last-child {
+    font-size: 1.3em;
+    text-transform: uppercase;
+    color: #a0525d; /* Muted Rose */
+    letter-spacing: 1px;
+}
+
+.signature {
+    margin-top: 40px;
+    font-size: 1.1em;
+    color: #e91e63;
+    font-style: italic;
+}
+
+/* Style for the 'Happy Birthday' message when time runs out */
+#timer.finished {
+    font-size: 3em;
+    color: #e91e63;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+/* --- HEART EFFECTS --- */
+.heart {
+    position: absolute;
+    color: #e91e63; /* Romantic Pink for hearts */
+    font-size: 1.5em; /* Default size for floating hearts */
+    pointer-events: none; /* Crucial: ensures hearts don't block clicks on the page */
+    user-select: none;
+    z-index: 1000; /* Ensures hearts are on top of everything */
+}
+/* --- HEART EFFECTS --- */
+.heart {
+    position: absolute;
+    color: #e91e63; /* Romantic Pink for hearts */
+    font-size: 1.5em; /* Default size for floating hearts */
+    pointer-events: none; /* Crucial: ensures hearts don't block clicks on the page */
+    user-select: none;
+    z-index: 1000; /* Ensures hearts are on top of everything */
+}
+/* Animation for the randomly floating hearts */
+@keyframes floatUp {
+    0% { 
+        transform: translateY(0) rotate(0deg); 
+        opacity: 0.9;
+    }
+    100% { 
+        transform: translateY(-100vh) rotate(360deg); 
+        opacity: 0; 
+    }
+}
